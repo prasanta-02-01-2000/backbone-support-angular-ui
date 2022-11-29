@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Add Item Group</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person-circle-outline" style="font-size: 40px;margin-right: 15px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Item Group Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter item group name"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

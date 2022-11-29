@@ -1,0 +1,201 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Add Vendor</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person-circle-outline" style="font-size: 40px;margin-right: 15px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Company Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter company name"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Contact Person Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter contact person name"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Registration Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="number" placeholder="Enter registration number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Registration Date&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter registration date"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Address&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-textarea clearInput="true" placeholder="Enter address" [autoGrow]="true"></ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">State&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select interface="popover" placeholder="Select state">
+                <ion-select-option value="West Bengal">West Bengal</ion-select-option>
+                <ion-select-option value="Bihar">Bihar</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">District&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select interface="popover" placeholder="Select district">
+                <ion-select-option value="Paschim Medini Pur">Paschim Medini Pur</ion-select-option>
+                <ion-select-option value="Purba Medini Pur">Purba Medini Pur</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">PIN Code&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="number" placeholder="Enter pin code"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Mobile Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="number" placeholder="Enter mobile number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Contact Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="number" placeholder="Enter contact number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Email Id&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="email" placeholder="Enter email"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">PAN Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true"  placeholder="Enter pan number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">GST&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select interface="popover" placeholder="Select gst">
+                <ion-select-option value="Available">Available</ion-select-option>
+                <ion-select-option value="Appllied">Appllied</ion-select-option>
+                <ion-select-option value="Not Applicable">Not Applicable</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">GST Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter gst number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Declaration Letter&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="file"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+               <ion-label position="stacked">Vendor Approve&nbsp;<span style="color: red;">*</span></ion-label>
+               <ion-radio-group>
+                <ion-item>
+                  <ion-radio value="Yes"></ion-radio>&nbsp;Yes &nbsp;&nbsp;
+                  <ion-radio value="No"></ion-radio>&nbsp;No
+                </ion-item>
+              </ion-radio-group>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label style="font-size: 20px;font-weight: 600;color:#BD9B36">Banking Details</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Bank Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select interface="popover" placeholder="Select bank">
+                <ion-select-option value="1">Punjab National Bank</ion-select-option>
+                <ion-select-option value="2">State Bank Of India</ion-select-option>
+                <ion-select-option value="3">United Bank</ion-select-option>
+                <ion-select-option value="4">Axis Bank</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Branch Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter branch name"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Account Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" type="number" placeholder="Enter account number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Account Type&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select interface="popover" placeholder="Select account type">
+                <ion-select-option value="Savings">Savings</ion-select-option>
+                <ion-select-option value="Current">Current</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">IFS Code&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [clearInput]="true" placeholder="Enter ifs code"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

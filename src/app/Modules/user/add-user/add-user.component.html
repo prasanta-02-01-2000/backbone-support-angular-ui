@@ -1,0 +1,132 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Add User</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person-circle-outline" style="font-size: 40px;margin-right: 15px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="UserDetailsForm" (ngSubmit)="submitUserDetailsForm()" novalidate>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input [(ngModel)]="FullName" formControlName="FullName" placeholder="Enter name" required></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.FullName.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Name is required.
+            </ion-note>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.FullName.errors?.minlength">
+              <ion-icon name="alert-circle-outline"></ion-icon> Name should be min 3 chars long.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Role&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select formControlName="UserRole" [(ngModel)]="UserRole" value="" interface="popover" placeholder="Select role">
+                <ion-select-option value="Manager">Manager</ion-select-option>
+                <ion-select-option value="Staff">Staff</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserRole.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Role is required.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Email&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input formControlName="UserEmail" [(ngModel)]="UserEmail" value=""  placeholder="Enter email"></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserEmail.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Email is required.
+            </ion-note>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserEmail.errors?.pattern">
+              <ion-icon name="alert-circle-outline"></ion-icon> Email is not correct format.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Mobile Number&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input type="number" formControlName="UserMobileNumber"  [(ngModel)]="UserMobileNumber" value="" placeholder="Enter mobile number"></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserMobileNumber.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Mobile number is required.
+            </ion-note>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserMobileNumber.errors?.pattern">
+              <ion-icon name="alert-circle-outline"></ion-icon> Mobile number should be 10 digit.
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Gender&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-select formControlName="UserGender" [(ngModel)]="UserGender" value="" interface="popover" placeholder="Select gender">
+                <ion-select-option value="Male">Male</ion-select-option>
+                <ion-select-option value="Female">Female</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserGender.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Gender is required.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Date Of Birth&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input formControlName="UserDOB" [(ngModel)]="UserDOB" value=""  placeholder="Enter date of birth"></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserDOB.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> DOB is required.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">User Name&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input formControlName="UserName" [(ngModel)]="UserName" value=""  placeholder="Enter user name"></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.UserName.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> User Name is required.
+            </ion-note>
+          </ion-col>
+          <ion-col size="12" size-sm="3">
+            <ion-item>
+              <ion-label position="stacked">Password&nbsp;<span style="color: red;">*</span></ion-label>
+              <ion-input formControlName="Password" [(ngModel)]="Password" value=""  placeholder="Enter pasword"></ion-input>
+            </ion-item>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.Password.errors?.required">
+              <ion-icon name="alert-circle-outline"></ion-icon> Password is required.
+            </ion-note>
+            <ion-note style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.Password.errors?.minlength">
+              <ion-icon name="alert-circle-outline"></ion-icon> Password should be min 3 chars long.
+            </ion-note>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button type="submit"  fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    
+      </form>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

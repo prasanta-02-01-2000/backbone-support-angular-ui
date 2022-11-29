@@ -1,0 +1,326 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title>Add Item</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person-circle-outline" style="font-size: 40px;margin-right: 15px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="ion-card">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-sm="10" *ngIf="activeItemElement == 'item-section-active'" class="item-section">
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Item Group&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item group">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Item Sub Group&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item sub group">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Item Type&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item type">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Item Name&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter item name"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Experiment/Purpose&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter purpose"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Asset Type&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select asset type">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Reorder Level&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter reorder level"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Reorder Qty&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter reorder qty"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Uom&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select uom">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Store Uom&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select store uom">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Stock On Hand&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter stock on hand"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Rate&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter rate"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size-sm="3">
+                <ion-item>
+                  <ion-label position="stacked">Vat(in %)&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter vat"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <br>
+            <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="10" *ngIf="activeItemElement == 'service-section-active'" class="item-service-section">
+            <ion-row>
+              <ion-col size-sm="3"> 
+                <ion-item>
+                  <ion-label position="stacked">Item&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Make&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter make"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Model&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter model"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Serial&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter serial"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Purchase Date&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter purchase date"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Installation Date&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter installation date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Warranty Term&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter warranty term"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Warranty Details&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter warranty details"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Log Book Serial&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter log book serial"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <br>
+            <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="10" *ngIf="activeItemElement == 'annual-section-active'" class="annual-maintainence-section">
+            <ion-row>
+              <ion-col size-sm="3">
+                <ion-item>
+                  <ion-label position="stacked">Item&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size-sm="3">
+                <ion-item>
+                  <ion-label position="stacked">Item Model&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-select interface="popover" placeholder="Select item model">
+                    <ion-select-option value="Single">Single</ion-select-option>
+                    <ion-select-option value="Multiple">Multiple</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">AMC Provider&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter amc provider"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">AMC Type&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter amc type"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">AMC Value&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter amc value"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Status&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter status"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">AMC Start Date&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter start date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">AMC Renewal Date&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter renewal date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Vendor&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter vendor"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="stacked">Vendor Contact Number&nbsp;<span style="color: red;">*</span></ion-label>
+                  <ion-input [clearInput]="true" placeholder="Enter vendor number"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <br>
+            <ion-row>
+          <ion-col size="6" size-sm="1">
+              <ion-button fill="solid" class="save-button">
+                Save
+              </ion-button>&nbsp;&nbsp;
+          </ion-col>
+          <ion-col size="6" size-sm="1">
+            <ion-button fill="solid" class="cancel-button">
+              Cancel
+            </ion-button>
+        </ion-col>
+          
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="2" style="border:1px solid #e6e6e6;border-radius: 13px;">
+                <ion-card class="card-section" [ngClass]="cardItem" (click)="activeItemSection('item-section-active')">
+                  <ion-card-header>
+                    <ion-card-subtitle style="text-align: center;font-size: 16px;font-weight: 600;">Item</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+                <ion-card class="card-section" [ngClass]="cardItemService" (click)="activeItemSection('service-section-active')">
+                  <ion-card-header>
+                    <ion-card-subtitle style="text-align: center;font-size: 16px;font-weight: 600;">Item Service</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+                <ion-card class="card-section" [ngClass]="cardAnnual" (click)="activeItemSection('annual-section-active')">
+                  <ion-card-header>
+                    <ion-card-subtitle style="text-align: center;font-size: 15px;font-weight: 600;">Annual Maintainence</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,365 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>View Item</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="person-circle-outline" style="font-size: 40px;margin-right: 15px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="ion-card">
+    <ion-card-content>
+      <ion-grid class="ion-text-center">
+        <ion-row>
+          <ion-col size-sm="10" *ngIf="activeItemElement == 'item-section-active'">
+            <ion-row class="header-row">
+              <ion-col><ion-text>Sl.No.</ion-text></ion-col>
+              <ion-col>Item Group</ion-col>
+              <ion-col>Item Sub Group</ion-col>
+              <ion-col>Item Type</ion-col>
+              <ion-col>Item Name</ion-col>
+              <ion-col>Stock</ion-col>
+              <ion-col>Rate</ion-col>
+              <ion-col>Action</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>1</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Mobile</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Nokia</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>10 pic</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>8,999</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>2</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Mobile</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Honor 9 Lite</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>10 pic</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>8,999</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>3</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Mobile</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Redmi</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>10 pic</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>8,999</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>4</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Mobile</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Samsung</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>10 pic</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>8,999</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>5</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Electronics</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Mobile</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Oppo</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>10 pic</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>8,999</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="10" *ngIf="activeItemElement == 'service-section-active'">
+            <ion-row class="header-row">
+              <ion-col><ion-text>Sl.No.</ion-text></ion-col>
+              <ion-col>Item Name</ion-col>
+              <ion-col>Model Name</ion-col>
+              <ion-col>Purchase Date</ion-col>
+              <ion-col>Installation Date</ion-col>
+              <ion-col>Action</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>1</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Nokia</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Nokia-500</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>2</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Honor</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Honor 9 Lite</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text>3</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Honor</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>Honor 10 Lite</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>15/11/2022</ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="10"  *ngIf="activeItemElement == 'annual-section-active'">
+            <ion-row class="header-row">
+              <ion-col size="1"><ion-text>Sl.No.</ion-text></ion-col>
+              <ion-col size="2">Name</ion-col>
+              <ion-col size="2">Role</ion-col>
+              <ion-col size="2">Email</ion-col>
+              <ion-col size="2">Contact Number</ion-col>
+              <ion-col size="1">Status</ion-col>
+              <ion-col size="2">Action</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-text>1</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Prasanta Saren</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Manager</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>prasanta@yopmail.com</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>6296601190</ion-text>
+              </ion-col>
+              <ion-col size="1">
+                <ion-text class="active">Active</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-text>2</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Prasanta Saren</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Manager</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>prasanta@yopmail.com</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>6296601190</ion-text>
+              </ion-col>
+              <ion-col size="1">
+                <ion-text class="delete">Delete</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1">
+                <ion-text>3</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Prasanta Saren</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>Manager</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>prasanta@yopmail.com</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>6296601190</ion-text>
+              </ion-col>
+              <ion-col size="1">
+                <ion-text class="active">Active</ion-text>
+              </ion-col>
+              <ion-col size="2">
+                <ion-text>
+                  <ion-icon class="pencil-icon"  ios="create-outline" md="create-sharp"></ion-icon>
+                  <ion-icon class="delete-icon"  ios="trash-outline" md="trash-sharp"></ion-icon>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size-sm="2" style="border:1px solid #e6e6e6;border-radius: 13px;">
+            <ion-card class="card-section" [ngClass]="cardItem" (click)="activeItemSection('item-section-active')">
+              <ion-card-header>
+                <ion-card-subtitle style="text-align: center;font-size: 16px;font-weight: 600;">Item</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+            <ion-card class="card-section" [ngClass]="cardItemService" (click)="activeItemSection('service-section-active')">
+              <ion-card-header>
+                <ion-card-subtitle style="text-align: center;font-size: 16px;font-weight: 600;">Item Service</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+            <ion-card class="card-section" [ngClass]="cardAnnual" (click)="activeItemSection('annual-section-active')">
+              <ion-card-header>
+                <ion-card-subtitle style="text-align: center;font-size: 15px;font-weight: 600;">Annual Maintainence</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+</ion-card-content>
+</ion-card>
+</ion-content>
